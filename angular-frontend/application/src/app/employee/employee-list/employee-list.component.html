@@ -1,0 +1,30 @@
+<div class="mt-3">
+    <a href="/create-employee" class="btn btn-primary my-3">Add employee</a>
+    <input type="text" placeholder="search..." class="mx-5 rounded p-1" />
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>First Name </td>
+            <td>Last Name </td>
+            <td>Gender </td>
+            <td>Job Title</td>
+            <td>Department</td>
+            <td>Actions </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{ employee.first_name }}</td>
+            <td>{{ employee.last_name }}</td>
+            <td>{{ employee.gender }}</td>
+            <td>{{ employee.job_title }}</td>
+            <td>{{ employee.department }}</td>
+            <td>
+                <button (click)="updateEmployee(employee.id)" class="btn btn-info">Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

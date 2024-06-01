@@ -1,0 +1,54 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Employee </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> First Name</label>
+            <input type="text" class ="form-control" id = "first_name"
+                [(ngModel)]="employee.first_name" name = "first_name">
+        </div>
+    
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class ="form-control" id = "last_name"
+                [(ngModel)] = "employee.last_name" name = "last_name">
+        </div>
+    
+        <div class="form-group">
+            <label> Gender</label>
+            <select id="gender" class="form-control" [(ngModel)]="employee.gender" name="gender">
+                <option [value]="gender.MALE">Male</option>
+                <option [value]="gender.FEMALE">Female</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label> Job title</label>
+            <input type="job_title" class ="form-control" id = "job_title"
+                [(ngModel)] = "employee.job_title" name = "job_title">
+        </div>
+        
+        <div class="form-group">
+            <label> Contract start date</label>
+            <input type="contract_start_date" class ="form-control" id = "contract_start_date"
+                [(ngModel)] = "employee.contract_start_date" name = "contract_start_date">
+        </div>
+        
+        <div class="form-group">
+            <label> Department</label>
+            <select id="department" class="form-control" [(ngModel)]="employee.department" name="department">
+                <option *ngFor="let dept of departments" [value]="dept">{{ dept.name }}</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label> Manager</label>
+            <input type="manager" class ="form-control" id = "manager"
+                [(ngModel)] = "employee.manager" name = "manager">
+        </div><br />
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+        <a href="/employees" class = "btn btn-danger mx-3">back</a>
+
+    </form>
+    </div> 
