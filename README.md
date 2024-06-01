@@ -19,3 +19,11 @@
 - The backend is running on an embeded Tomcat server at port http://localhost:8080
 
 **Step 5 ( Go ahead and test the API endpoints )**
+
+
+***Fonctionalites de mon application***
+1- CRUD Department
+2- CRUD Employee
+3- SEARCH functionalities ( implemented part of the backend but not the front )
+
+
